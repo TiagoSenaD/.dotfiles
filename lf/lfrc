@@ -1,0 +1,54 @@
+# Basic Settings
+set ignorecase true
+set icons true
+set drawbox true
+set preview true
+
+
+# Basic Functions
+map . set hidden!
+map N set number!
+map p paste
+map x cut
+map y copy
+map <enter> open
+map C clear
+map R reload
+
+# Costom cmd
+cmd mkdir %mkdir "$@"
+
+cmd feh %devour feh "$f"
+
+cmd Vid %devour mpv -fs "$f"
+
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+cmd bg %feh --bg-scale "$f"
+
+
+# Mapping cmds
+map mk   push :mkdir<space>
+map i   :feh
+map v   :Vid
+map bg  :bg
+
+
+# Movement (g)
+map gc cd ~/.config
+
+# Remove some defaults
+map o
+map n
+map "'"
+map '"'
+map d
+map m
