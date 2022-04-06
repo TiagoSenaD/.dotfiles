@@ -23,11 +23,12 @@ bspc config gapless_monocle       true
 bspc config top_padding           3
 
 #rules
-bspc rule -a firefox Desktop=     '^5'
-#bspc rule -a feh state=floating
 
 #autostart
 
-picom -b
-${HOME}/.fehbg
-polybar example -r
+picom --experimental-backend -b
+${HOME}/.fehbg &
+polybar -c ${HOME}/.config/polybar/config.ini My_polybar
+
+#TODO: Make its works
+#${HOME}/.config/polybar/launch.sh
