@@ -23,12 +23,19 @@ bspc config gapless_monocle       true
 bspc config top_padding           3
 
 #rules
+bspc rule -a alacritty monitor=^1
+bspc rule -a firefox:Navigator monitor=^2
+
+
+#kill Start
+
+kill -9 $(pgrep -f 'redshift')
+
 
 #autostart
-
-picom --experimental-backend -b
+picom --experimental-backend & 
 ${HOME}/.fehbg &
-polybar -c ${HOME}/.config/polybar/config.ini My_polybar
-
+polybar -c ${HOME}/.config/polybar/config.ini My_polybar &
+redshift -c ${HOME}/.config/redshift.conf &
 #TODO: Make its works
 #${HOME}/.config/polybar/launch.sh

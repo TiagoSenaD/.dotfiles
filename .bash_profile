@@ -5,7 +5,7 @@ PATH="${HOME}/.local/bin${PATH:+:${PATH}}"
 export EDITOR="nvim"
 export TERM="alacritty"
 export HISTCONTROL=ignoredups:erasedups
-
+export BROWSER="qutebrowser"
 
 
 

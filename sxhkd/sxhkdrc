@@ -20,9 +20,16 @@ super + shift + s
 
 
 
-#Open firefox
+#Open rofi Drun 
 super + F1
   rofi -show drun
+
+#Fullscreen
+super + F11
+  bspc node -t \~fullscreen
+
+
+
 
 #
 # bspwm hotkeys
