@@ -6,9 +6,9 @@ export EDITOR="nvim"
 export TERM="alacritty"
 export HISTCONTROL=ignoredups:erasedups
 export BROWSER="qutebrowser"
-
-
-
+export PDF="evince"
+export IMAGE="feh"
+export VIDEO="mpv"
 
 # Get the aliases and functions
 [ -f $HOME/.bashrc ] && . $HOME/.bashrc
