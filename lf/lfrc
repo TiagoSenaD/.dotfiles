@@ -22,6 +22,20 @@ cmd feh %devour feh "$f"
 
 cmd Vid %devour mpv -fs "$f"
 
+cmd open ${{
+  test -L $f && f=$(readlink -f $f)
+  case $(file --mime-type $f -b) in
+    text/*) $EDITOR $fx;;
+    application/pdf) $(devour $PDF $fx);;
+    image/*) $(devour $IMAGE $fx);;
+    video/*) $(devour $VIDEO $fx);;
+    *) echo "Unsupported format" ;;
+  esac
+}}
+
+
+
+
 cmd unarchive ${{
   case "$f" in
       *.zip) unzip "$f" ;;
@@ -37,7 +51,7 @@ cmd bg %feh --bg-scale "$f"
 
 # Mapping cmds
 map mk   push :mkdir<space>
-map i   :feh
+map i   :exc
 map v   :Vid
 map bg  :bg
 
