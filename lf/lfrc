@@ -18,10 +18,6 @@ map R reload
 # Costom cmd
 cmd mkdir %mkdir "$@"
 
-cmd feh %devour feh "$f"
-
-cmd Vid %devour mpv -fs "$f"
-
 cmd open ${{
   test -L $f && f=$(readlink -f $f)
   case $(file --mime-type $f -b) in
@@ -32,9 +28,6 @@ cmd open ${{
     *) echo "Unsupported format" ;;
   esac
 }}
-
-
-
 
 cmd unarchive ${{
   case "$f" in
@@ -51,8 +44,6 @@ cmd bg %feh --bg-scale "$f"
 
 # Mapping cmds
 map mk   push :mkdir<space>
-map i   :exc
-map v   :Vid
 map bg  :bg
 
 
