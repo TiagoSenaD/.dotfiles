@@ -41,11 +41,13 @@ cmd unarchive ${{
 
 cmd bg %feh --bg-scale "$f"
 
+cmd tb %(devour feh -t "$@")
+
 
 # Mapping cmds
 map mk   push :mkdir<space>
 map bg  :bg
-
+map tb  :tb
 
 # Movement (g)
 map gc cd ~/.config
@@ -57,3 +59,4 @@ map "'"
 map '"'
 map d
 map m
+map t

@@ -23,8 +23,8 @@ bspc config gapless_monocle       true
 bspc config top_padding           3
 
 #rules
-bspc rule -a alacritty monitor=^1
-bspc rule -a firefox:Navigator monitor=^2
+#bspc rule -a \* -o monitor=^1 && alacritty
+#bspc rule -a \* -o monitor=^2 && firefox
 
 
 #kill Start
