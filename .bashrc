@@ -26,7 +26,7 @@ set -o vi
 alias Install="sudo xbps-install"
 alias Update="sudo xbps-install -Su && sudo xbps-remove -Oo "
 alias Query="xbps-query"
-
+alias q="exit"
 
 #ncspot
 alias Ncspoty="${HOME}/.cargo/bin/ncspot"
