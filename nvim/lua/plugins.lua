@@ -3,7 +3,7 @@ local Plug = vim.fn['plug#'] --yes, i like vim-plug :)
 
 vim.call('plug#begin','~/.config/nvim/plugged')
         --lsp
-                Plug "williamboman/nvim-lsp-installer"
+                Plug "williamboman/mason.nvim"
                 Plug "neovim/nvim-lspconfig"
         --term
                 Plug ('akinsho/toggleterm.nvim', {tag = 'v1.*'})
