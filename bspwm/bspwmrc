@@ -3,6 +3,8 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 bspc monitor -d I II III IV V
 
+#Xserver
+xsetroot -cursor_name left_ptr &
 
 #configs
 bspc config border_width          3
@@ -21,22 +23,17 @@ bspc config gapless_monocle       true
 bspc config top_padding           3
 
 
-#kill Start
-kill -9 $(pgrep -f 'redshift')
-
-
 #autostart
-picom --experimental-backend & 
+picom & 
 ${HOME}/.fehbg &
 polybar -c ${HOME}/.config/polybar/config.ini My_polybar &
-redshift -c ${HOME}/.config/redshift.conf &
 
 #TODO: Make its works
 #${HOME}/.config/polybar/launch.sh
 
 
 #rules
-#bspc rule -a \* -o monitor=^5 && $BROWSER
+#bspc rule -a firefox monitor=^5
 
 
 

@@ -128,3 +128,7 @@ super + F11
 # Calender
 super + q
   alacritty -e calcurse
+
+#firefox
+super + F2
+        firefox

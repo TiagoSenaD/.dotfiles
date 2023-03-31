@@ -5,8 +5,8 @@ PATH="${HOME}/.local/bin${PATH:+:${PATH}}"
 export EDITOR="nvim"
 export TERM="alacritty"
 export HISTCONTROL=ignoredups:erasedups
-export BROWSER="qutebrowser"
-export PDF="evince"
+export BROWSER="firefox"
+#export PDF="evince"
 export IMAGE="feh"
 export VIDEO="mpv"
 
@@ -17,5 +17,4 @@ export VIDEO="mpv"
 if [ "$(tty)" = "/dev/tty1" ]; then
   pgrep -x bspwm || exec startx ${HOME}/.config/X11/xinitrc
 fi
-
 

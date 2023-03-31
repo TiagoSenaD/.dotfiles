@@ -27,13 +27,10 @@ alias Install="sudo xbps-install"
 alias Update="sudo xbps-install -Su && sudo xbps-remove -Oo "
 alias Query="xbps-query"
 alias q="exit"
-
-#ncspot
-alias Ncspoty="${HOME}/.cargo/bin/ncspot"
-
+alias HDMI="${HOME}/.config/bspwm/HDMI"
 
 #shutdown
-alias Shutdown="sudo shutdown -h"
+alias Shutdown="sudo shutdown -h now"
 alias Reboot="sudo shutdown -r now"
 
 
