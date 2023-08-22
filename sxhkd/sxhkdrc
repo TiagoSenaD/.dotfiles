@@ -111,24 +111,20 @@ super + Return
 
 # File manager
 super + f
-	alacritty -e lf
+  alacritty -e lf
 
 # Screenshot
 super + shift + s
   flameshot gui
 
-# Open rofi Drun 
-super + F1
-  rofi -show drun
-
 # Fullscreen
 super + F11
   bspc node -t \~fullscreen
 
-# Calender
-super + q
-  alacritty -e calcurse
-
 #firefox
-super + F2
-        firefox
+super + F1
+  firefox
+
+#power_tty
+super + F4
+  bspc rule -a \* -o state=floating && alacritty -e power_tty

@@ -26,14 +26,13 @@ bspc config top_padding           3
 #autostart
 picom & 
 ${HOME}/.fehbg &
-polybar -c ${HOME}/.config/polybar/config.ini My_polybar &
+polybar -c ${HOME}/.config/polybar/config.ini &
 
 #TODO: Make its works
 #${HOME}/.config/polybar/launch.sh
 
 
 #rules
-#bspc rule -a firefox monitor=^5
 
 
 

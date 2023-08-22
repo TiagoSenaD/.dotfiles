@@ -16,10 +16,9 @@ vim.call('plug#begin','~/.config/nvim/plugged')
                -- Plug 'hrsh7th/cmp-vsnip'
                -- Plug 'hrsh7th/vim-vsnip'
         --term
-                Plug ('akinsho/toggleterm.nvim', {tag = 'v1.*'})
+                Plug 'voldikss/vim-floaterm'
         --theme
                 Plug 'Mofiqul/vscode.nvim'
-                Plug 'jacoborus/tender.vim'
 
 vim.call('plug#end')
 

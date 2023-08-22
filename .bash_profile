@@ -6,7 +6,7 @@ export EDITOR="nvim"
 export TERM="alacritty"
 export HISTCONTROL=ignoredups:erasedups
 export BROWSER="firefox"
-#export PDF="evince"
+export PDF="evince"
 export IMAGE="feh"
 export VIDEO="mpv"
 

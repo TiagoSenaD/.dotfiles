@@ -16,7 +16,6 @@ if [ -e ${HOME}/.config/lf/lffonts ]; then
   source ${HOME}/.config/lf/lffonts
 fi
 
-
 set -o vi
 
 ### ALIAS ###
@@ -27,17 +26,14 @@ alias Install="sudo xbps-install"
 alias Update="sudo xbps-install -Su && sudo xbps-remove -Oo "
 alias Query="xbps-query"
 alias q="exit"
-alias HDMI="${HOME}/.config/bspwm/HDMI"
-
-#shutdown
-alias Shutdown="sudo shutdown -h now"
-alias Reboot="sudo shutdown -r now"
-
 
 #infos
 alias Pkg="xbps-query -l | grep -c ''"
 
-
-# Colors
+#Colors
 alias ls='ls --color=auto'
 alias grep="grep --color=auto"
+
+#wpa_cli
+alias Nlist='wpa_cli list_network'
+alias Nenable='wpa_cli enable_network $@'
