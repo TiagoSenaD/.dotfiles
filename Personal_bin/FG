@@ -1,0 +1,117 @@
+#!/bin/bash
+# Name:			File_Generator
+# Version: 		1.0
+# Description:	Generates files of certain languages with a predetermined header
+# Author:		Tiago Sena
+# Email:		---
+
+#================Functions=======================
+
+##Function to generate the header in C
+function FGC()
+{
+	
+	if [ -e "${Name_File}" ]; then
+	{
+		echo "${Name_File} existing file in directory"
+		return 0
+	}
+	else
+	{
+		touch ${Name_File}
+		echo -e "#include<stdio.h>\n" >> ${Name_File}
+		echo -e "int main(int argc, char* argv[])\n{\n\t//code" >> ${Name_File}
+		echo -e "\treturn 0;}" >> ${Name_File}
+		echo "${Name_File} Create"
+	}
+	fi
+	return 0
+}
+
+##Function to generate the header in CPP
+FGCPP()
+{
+	if [ -e "${Name_File}" ]; then
+	{
+		echo "${Name_File} existing file in directory"
+		return 0
+	}
+	else
+	{
+		touch ${Name_File}
+		echo -e "#include<iostream>\n" >> ${Name_File}
+		echo -e "using namespace std;\n" >> ${Name_File}
+		echo -e "int main(int argc, char * argv[])\n{\n\t//code" >> ${Name_File}
+		echo -e "\treturn 0;\n}" >> ${Name_File}
+		echo "${Name_File} criado"
+	}
+	fi
+	return 0
+}
+
+##Function to generate the header in H
+function FGH() 
+{
+	if [ -e "${Name_File}" ]
+	then
+	{
+		echo "${Name_File} existing file in directory"
+		return 0
+	}
+	else
+	{
+		touch ${Name_File}
+		echo -e "#ifndef" ${Name_File^^} | sed "s/\.[A-Z]*/_H/" >> ${Name_File}
+		echo -e "#define" ${Name_File^^} | sed "s/\.[A-Z]*/_H/" >> ${Name_File}
+		echo -e "\n#endif" >> ${Name_File}
+		echo "${Name_File} Create"
+	}
+	fi
+	return 0
+}
+
+##Function to generate the Makefile file 
+function FGMF() 
+{
+	if [ -e "${Name_File}" ]
+	then
+	{
+		echo "${Name_File} existing file in directory"
+		return 0
+	}
+	else
+	{
+		touch ${Name_File}
+		echo -e "CC = clang">> ${Name_File}
+		echo -e "LIBS = ">> ${Name_File}
+        echo -e "OPT = -O2">> ${Name_File}
+		echo -e "FLAGS = -c -w -wall -ansi -pedantic\n">> ${Name_File}
+		echo -e "all:">> ${Name_File}
+		echo "${Name_File} Cerate"
+	}
+	fi
+	return 0
+}
+
+#===========================main==============================
+
+#Getopts
+while getopts "hl:" option;
+do
+   case ${option} in
+		h)Help ;;
+		l)cd ~/$OPTARG; pwd;;
+		\?)echo Invalid character exit 1;;
+		*)echo "Error: -${OPTARG} need an argument.";;
+	esac
+done
+
+shift $((OPTIND -1))
+
+Name_File=$1
+case ${Name_File#*.} in
+	c) FGC ;;
+	h) FGH ;;
+    cpp) FGCPP ;;
+    Makefile) FGMF ;;
+esac

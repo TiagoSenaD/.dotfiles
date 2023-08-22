@@ -1,0 +1,31 @@
+#!/bin/bash
+# Name:         power_tty
+# Version:      0.1
+# Description:  Script Based in Power Menu of Aditya Shakya (adi1090x) creating a menu in terminal
+# Author:       Tiago Sena
+# Email:        ----------
+
+#=========================================VAR=========================================
+Shutdown="Shutdown"
+Reboot="Reboot"
+Quit="Quit"
+Sleep="Sleep"
+
+#=========================================Main========================================
+clear
+Display= echo -e "$(uptime -p)\n1-$Shutdown\n2-$Reboot\n3-$Sleep\n4-$Quit"
+
+read -p ': ' Var
+
+case $Var in
+  $Shutdown | 1)
+    sudo shutdown -h now;;
+  $Reboot | 2)
+    sudo shutdown -r now;;
+  $Sleep | 3)
+    sudo zzz;;
+  $Quit | 4 | q)
+    exit 2;;
+  *)
+    exit 127;;   
+esac
