@@ -7,13 +7,10 @@ vim.o.tabstop=4                                               --tab equal a 4 sp
 vim.o.softtabstop=2
 vim.o.shiftwidth=2 
 vim.o.clipboard=unnamedplus                                   --
-vim.o.guifont="DroidSansMono\\ Nerd\\ Font\\ Mono:h12"        --
+--vim.o.guifont="DroidSansMono\\ Nerd\\ Font\\ Mono:h12"        --
 vim.o.t_Co=256                                                --suport 256 colors
 vim.o.laststatus=3                                            --
 vim.o.encoding="utf-8"                                        --
 vim.o.fileencoding="utf-8"                                    --
 vim.o.formatoptions= vim.o.formatoptions .. 'cro'             --
 vim.o.shortmess= vim.o.shortmess .. "cro"                     --
---vim.o.noshowmode                                            --
---vim.o.
-

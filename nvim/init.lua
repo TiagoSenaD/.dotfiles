@@ -1,14 +1,2 @@
-require('plugins')
-require('keymappings')
-require('settings')
-require('theme')
-require('mason')
-require('lsp')
---require('cmp')
-
---init
-vim.cmd([[colorscheme vscode]])                               -- colorscheme vscode
-
-
-
-
+require("config")
+vim.cmd("colorscheme kanagawa-wave")
