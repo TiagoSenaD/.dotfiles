@@ -4,7 +4,6 @@ set icons true
 set drawbox true
 set preview true
 
-
 # Basic Functions
 map . set hidden!
 map N set number!
@@ -16,8 +15,6 @@ map C clear
 map R reload
 
 # Costom cmd
-cmd mkdir %mkdir "$@"
-
 cmd open ${{
   test -L $f && f=$(readlink -f $f)
   case $(file --mime-type $f -b) in
@@ -39,14 +36,10 @@ cmd unarchive ${{
   esac
 }}
 
-cmd bg %feh --bg-scale "$f"
-
 cmd tb %(devour feh -t "$@")
 
 
 # Mapping cmds
-map mk   push :mkdir<space>
-map bg  :bg
 map tb  :tb
 
 # Movement (g)

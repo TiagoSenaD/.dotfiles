@@ -16,21 +16,22 @@ scrolling:
 
 font:
   normal:
-    family: DroidSansMono Nerd Font Mono
-    style: monospace
+    family: JetBrainsMono
+    style: monospace 
   bold:
-    family: DroidSansMono Nerd Font Mono
+    family: JetBrainsMono
     style: Bold
   italic:
-    family: DroidSansMono Nerd Font Mono
+    family: JetBrainsMono
     style: MediumItalic
   bold_italic:
-    family: DroidSansMono Nerd Font Mono
+    family: JetBrainsMono
     style: Bold Italic
-  size: 9.9
+  size: 10
   offset:
     x: 1
     y: 0
+
 draw_bold_text_with_bright_colors: true
 
 colors:

@@ -1,7 +1,7 @@
 # .bash_profile
 
 # Exports
-PATH="${HOME}/.local/bin${PATH:+:${PATH}}"
+PATH="${HOME}/.local/bin:${HOME}/.cargo/bin${PATH:+:${PATH}}"
 export EDITOR="nvim"
 export TERM="alacritty"
 export HISTCONTROL=ignoredups:erasedups

@@ -20,12 +20,14 @@ set -o vi
 
 ### ALIAS ###
 
-
 #xbps
 alias Install="sudo xbps-install"
 alias Update="sudo xbps-install -Su && sudo xbps-remove -Oo "
 alias Query="xbps-query"
 alias q="exit"
+
+#Bluetooth
+alias BlueReset="sudo sv restart bluetoothd"
 
 #infos
 alias Pkg="xbps-query -l | grep -c ''"
